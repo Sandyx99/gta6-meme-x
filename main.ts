@@ -22,6 +22,13 @@ const PITCH =
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR || ".";
 writeFileSync(join(outDir, "meme.png"), Buffer.from(MEME_BASE64, "base64"));
+const POST = {
+  account: "DiKi176295",
+  post: "https://x.com/DiKi176295/status/2124664250975269068",
+  postId: "2124664250975269068",
+  url: "https://x.com/DiKi176295/status/2124664250975269068",
+};
+writeFileSync(join(outDir, "POST.json"), JSON.stringify(POST));
 console.log(JOKE);
 console.log(PITCH);
 console.log("Wrote meme.png");
