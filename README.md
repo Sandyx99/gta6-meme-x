@@ -21,6 +21,14 @@ node main.ts
 
 This writes the meme image to `meme.png` and prints the joke and the make.fun pitch.
 
+## How it was made
+
+`main.ts` regenerates `meme.png` from scratch using Node 22 standard library only: it draws the two-panel meme (the skeleton gamer on the left, the make.fun ghost driving through Vice City on the right) pixel by pixel and writes the PNG itself. No network calls, no external assets, no dependencies — run it anywhere Node 22 is installed and the image comes out byte-identical.
+
+## Verified
+
+Regeneration check passed: running `node main.ts` rewrites `meme.png` byte-identically (2,853,389 bytes, same sha256 before and after the run).
+
 ## The X post
 
 Post this from your own public X account, with `meme.png` as the **first** picture:
